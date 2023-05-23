@@ -1,0 +1,139 @@
+*{box-sizing: border-box;
+    text-align: center;}
+body{direction: rtl;
+    scroll-behavior: smooth;}
+::-webkit-scrollbar{width: 0;}
+.company-name{
+    width: 100%;
+    text-align: center;}
+.company-name h4{margin: 10px 0;}
+.date-board{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;}
+@media (max-width: 575px) {.date-board{flex-direction: column;}}
+.board{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 250px;}
+.board span{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;}
+    span::before{
+        content:var(--section-name) ;
+        position: absolute;
+        right: 0;}
+.board .car-name input{width: 80%;}
+.board .board-details input{width: 40%;}
+.date-board .date{width: 250px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;}
+.date-board .date input{width: 80%;}
+.date-board .date::before{
+    content:var(--section-name) ;
+    position: absolute;
+    right: 50%;
+    top: -30px;
+    transform: translateX(-50%);} 
+@media (max-width: 575px) {
+    .date-board .date::before{
+        content:var(--section-name) ;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateX(0);} }
+.titles{
+   height: fit-content;
+   width: 100%;
+   color: white;
+   display: grid;
+   grid-template-columns:1fr repeat(4,calc(60%/4));
+   gap: 10px;
+   padding: 0 10px;} 
+.titles p,textarea{
+    max-height: 50px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    border: 1px solid black;}
+form{
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    grid-template-columns:1fr repeat(4,calc(60%/4));
+    gap: 10px;
+    padding: 0 10px;
+    margin: 20px 0;} 
+input{text-align: center;
+outline: none;}
+@media (max-width:575px) {
+    .head{display: none;}
+    form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;}}
+form label{display: none;}
+@media (max-width: 575px){
+    form label{
+        display:block;
+        font-weight: bold;}
+form input::placeholder{color: transparent;}}
+@media (max-width:575px) {
+    input[type="button"]{
+        padding: 10px 40px;
+        text-align: center;
+        border: none;
+        font-weight: bold;}}
+textarea{
+    overflow: hidden;
+    resize: none;
+    border-radius: 10px;
+    margin-bottom: 5px;}
+textarea:focus{outline: none;}
+.total{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    border-radius: 25px;}
+.total-piece-price,
+.total-price{
+    display: flex;
+    justify-content: space-between;}
+.total-piece-price #sum,
+.total-price input{
+    width: 100px;
+    text-align: left;
+    font-weight: bold;}
+@media print {
+    form{display: none;}
+    .head{
+    height: fit-content;
+    width: 100%;
+    color: white;
+    display: grid;
+    grid-template-columns:1fr repeat(4,calc(60%/4));
+    gap: 10px;
+    padding: 0 10px;}
+    .total-price input{border: none;}
+    textarea{border: none;}
+    @media (max-width: 575px) {.date-board{flex-direction: row;}}
+    .date-board .date::before{
+        content:var(--section-name) ;
+        position: absolute;
+        right: 50%;
+        top: -30px;
+        transform: translateX(-50%);}
+        .total{
+            position: fixed;
+            bottom: 0;}}

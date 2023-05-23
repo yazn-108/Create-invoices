@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فاتورة</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#217ace"/>
+    <meta name="msapplication-navbutton-color" content="#217ace"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#217ace"/>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+<body>
+<div class="company-name">
+    <h4>اسم الشركة</h4>
+</div>
+<div class="date-board">
+    <div class="board">
+        <span class="car-name" style="--section-name:'المركبة:';">
+            <input type="text">
+        </span>
+        <span class="board-details" style="--section-name:'اللوحة:';">
+            <input type="text" placeholder="الحروف">
+            <input type="number" placeholder="الارقام">
+        </span>
+    </div>
+    <div class="date" style="--section-name:'التاريخ';">
+        <input type="date"id="date">
+    </div>
+</div>
+<div class="titles head">
+    <p>النوع</p>
+    <p>اسم القطعة</p>
+    <p>رقم القطعة</p>
+    <p>سعر القطعة</p>
+    <p>الكمية</p>
+</div>
+<form id="form">
+    <label for="item">النوع</label>
+    <input type="text" id="item" placeholder="النوع">
+    <label for="">اسم القطعة</label>
+    <input type="text" id="name" placeholder="اسم القطعة">
+    <label for="">رقم القطعة</label>
+    <input type="text" id="number" placeholder="رقم القطعة">
+    <label for="">سعر القطعة</label>
+    <input type="number" id="price" placeholder="سعر القطعة" value="0">
+    <label for="">الكمية</label>
+    <input type="number" id="quantity" placeholder="الكمية">
+    <br>
+    <input onclick="getText()" type="button" value="اضافة سطر">
+    <input onclick="printPage()" type="button" value="طباعة">
+</form>
+<div class="total">
+    <div class="total-piece-price">
+        <h4>مجموع سعر القطع </h4>
+        <h3 id='sum'></h3>
+    </div>
+    <div class="total-price">
+        <h4>المجموع</h4>
+        <h3><input type="number"></h3>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
